@@ -20,23 +20,12 @@ p{
 @keyframes matrix{
   0%{
     transform: scale(1.0, 1.0);
-    transform-origin: bottom;
+    transform-origin: center;
   }
-  /*50%{
-    transform: scale(1.0, 0.5);
-    transform-origin: bottom;
-  }
-  75%{
-    transform: scale(1.0,0.3);
-    transform-origin: bottom;
-  }
-  95%{
-    transform: scale(1.0,0.2);
-    transform-origin: bottom;
-  }*/
+ 
   100%{
-    transform: scale(1.0,0);
-    transform-origin: bottom;
+    transform: scale(0,0);
+    transform-origin: center;
     display: none;
   }
   
@@ -630,33 +619,57 @@ margin-left: 75px;
   display: block;
 
 }
+
 .fl-sobre {
  display: table;
   width: 100%;
   height: 500px;
  
 }
+
 .fl-icon-container{
   display: flex;
   flex-direction: row;
   justify-content:flex-start;
  
 }
+
 .fl-icon{
   width: 40px;
   height: 40px;
- background-color: #000;
+  background-color: #000;
    margin-right: 100px;
    text-align: center;
    display: block;
    border-radius: 50px;
    padding-top: 12px;
 }
+
 .fl-icon:hover{
   background-color: #fff;
 }
+.fl-list-page{
+  list-style: none;
+  margin-bottom: 15px;
+  display: block;
+}
+.fl-list-page > li{
+  margin-bottom: 15px;
+  padding-left: 15px;
+  position: relative;
+}
+.fl-list-page > li:before{
+  content: "";
+  width: 8px;
+  height: 8px;
+  display: block;
+  background-color: #2CCB69;
+  border-radius: 25px;
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+}
 
- 
 
 @media screen and (min-width: 576px){
   
@@ -807,6 +820,15 @@ margin-left: 75px;
 .fl-bg-black{
     background-color: #000;
 }
+.fl-img-resonsive{
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+
+
+}
 
 /* CLASSES UTILITARIAS */
 .fl-mar-left{
@@ -822,6 +844,7 @@ margin-left: 75px;
     font-family: 'Abril Fatface', serif;
     font-weight: normal;
   }
+
   .fl-subtitle{
     font-family: 'Open San', serif;
     font-weight: 800;
